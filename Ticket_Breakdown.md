@@ -15,15 +15,16 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
-## Your Breakdown Here
+## Your Breakdown Here ##
 
-- Add an extra table, `ExternalIds`, which is connected to the `Agents` and the `Facilities` tables, with the following structure:
+1. Add an extra table, `ExternalIds`, which is connected to the `Agents` and the `Facilities` tables, with the following structure:
+  
     |ExternalIds|
     -------------
     |facility_id: Reference[Facility]|
     |agent_id: Reference[Agent]   |
     |external_id: string|
 
-- Update `getShiftsByFacility` to return the new external id instead of the DB one, when available. If an external id is not available, falls back to the older version (the DB id). Make sure that the object returned by `getShiftsByFacility` maintains the same interface, despite having different values for ids.
+2. Update `getShiftsByFacility` to return the new external id instead of the DB one, when available. If an external id is not available, falls back to the older version (the DB id). Make sure that the object returned by `getShiftsByFacility` maintains the same interface, despite having different values for ids.
 
-- Add a mechanism for the facilities to assign their own ids to the agents. That would involve updating the agent endpoints to support the new data.
+3. Add a mechanism for the facilities to assign their own ids to the agents. That would involve updating the agent endpoints to support the new data.

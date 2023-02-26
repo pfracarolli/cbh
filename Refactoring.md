@@ -9,3 +9,5 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+The constants `TRIVIAL_PARTITION_KEY` and `MAX_PARTITION_KEY_LENGTH` were moved to the global scope to make them easier to be reused. An auxiliary `encode` function was created to avoid code repetition. Conditionals that depended on `event` being non-nullish were moved into the conditional block. `candidate` was initialized to `TRIVIAL_PARTITION_KEY` and updated if other conditions are met. 

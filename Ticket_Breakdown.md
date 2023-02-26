@@ -20,7 +20,7 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 1. Add an extra table, `ExternalIds`, which is connected to the `Agents` and the `Facilities` tables, with the following structure:
   
     |ExternalIds|
-    -------------
+    |------------|
     |facility_id: Reference[Facility]|
     |agent_id: Reference[Agent]   |
     |external_id: string|
